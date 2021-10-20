@@ -34,7 +34,6 @@ func (p *PanicHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 				http.Error(w, des, 500)
 			} else {
 				http.Error(w, "internal panic", 500)
-
 			}
 			log.Println("panic caught:", r.Method, r.URL)
 		}
